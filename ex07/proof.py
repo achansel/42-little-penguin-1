@@ -99,29 +99,10 @@ def main():
     PATH="/sys/kernel/debug/fortytwo/id"
     print(f"\n**** {PATH} TESTS ****")
     with open(PATH, "rb+", buffering=0) as g:
-        # test 1
         read_test("Read", g.read(1024), b"achansel")
-    
-        # test 2
-        try:
-            g.write(b"inval");
-            log_status("Different write 1", False)
-        except OSError:
-            log_status("Different write 1", True)
-
-        # test 3
-        try:
-            g.write(b"invalid!");
-            log_status("Different write 2", False)
-        except OSError:
-            log_status("Different write 2", True)
-
-        # test 4
-        try:
-            g.write(b"achansel");
-            log_status("Good write", True)
-        except OSError:
-            log_status("Good write", False)
+        write_test("Different write", b"inval", False)
+        write_test("Different write same len", b"invalid!", False)
+        write_test("Good write", b"achansel", True)
 
 if __name__ == "__main__":
     main()
