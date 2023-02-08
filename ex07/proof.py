@@ -28,7 +28,8 @@ import random
 no = 1
 def log_status(t, good):
     global no
-    print(f"{no}-{t}: {'Passed' if good else 'Failure'}")
+    status = '\033[0;32m\033[1mPassed\033[0m' if good else '\033[0;31m\033[1mFailure\033[0m'
+    print(f"{no}-{t}: {status}")
     no += 1
 
 PATH = ""
