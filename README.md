@@ -82,4 +82,53 @@ The code in this project will be run on the first project of the specialization,
   - I used both of these references and local udev rules on my system to write this udev rule.
 
 
+ ----------
+
+### ex05:
+**Instructions**:
+  - Take the kernel module written for [ex01](ex01/) and modify it to be a misc char device driver.
+  - Make it behave specifically on reads and writes and prove it.
+
+**Turn-in**:
+  - [Misc device driver](ex05/misc_device.c)
+  - [Makefile](ex05/Makefile)
+  - [Proof python3 script](ex05/proof.py)
+ 
+**What I did**:
+  - I read documentation online about misc device drivers.
+  - I implemented my device using those resources.
+  - I made a python script to test it quickly.
+
+---------
+
+### ex06:
+**Instructions**:
+  - Download the linux-next kernel, build it, compile it and boot it.
+
+**Turn-in**:
+  - [Kernel boot log](ex06/boot.log)
+ 
+**What I did**:
+  - I used `make defconfig` to quickly generate a config file, then I compiled it and moved the bzImage to my boot partition.
+  - After booting it using grub, I ran the command `dmesg` in order to obtain the logfile.
+
+---------
+
+### ex07:
+**Instructions**:
+  - Write a kernel module that uses debugfs
+  - You have to create a subdirectory in which you can find 3 special files handled by your driver.
+  - They all must have specific access rights and behavior and you must prove it.
+
+**Turn-in**:
+  - [The module](ex07)
+  - [Proof python3 script](ex07/proof.py)
+ 
+**What I did**:
+  - I read kernel documentation to learn about [debugfs](https://docs.kernel.org/filesystems/debugfs.html).
+  - I also had to read about [synchronization primitives in kernel space](https://docs.kernel.org/locking/mutex-design.html) and [jiffies](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/include/linux/jiffies.h).
+  - With the help of these resources and others I wrote the code to handle these 3 files.
+  - Finally, in order to test everything, I took my proof script from ex05 and heavily modified it.
+
+
 
