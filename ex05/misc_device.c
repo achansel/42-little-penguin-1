@@ -6,7 +6,7 @@
 /*   By: achansel <achansel@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 22:32:47 by achansel          #+#    #+#             */
-/*   Updated: 2023/02/08 15:27:37 by achansel         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:57:02 by achansel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,11 @@ ssize_t ft_write(struct file *f, const char __user *in, size_t len, loff_t *offs
         /* Check length first, allows for opitimization */
         if (len != LOGIN_LEN)
                 return (-EINVAL);
-        /* Ensure we copy all of it even if it doesn't copy all at once */
-        do {
-                int l = copy_from_user(user_data + data_off, in + data_off, len - data_off);
-                data_off += (len - data_off) - l;
-        } while (data_off < len);
+
+        /* Safe copy from user */
+        if (copy_from_user(user_data, in, len))
+                return (-EFAULT);
+
         /* Compare what we received and the login string */
         if (memcmp(user_data, LOGIN, LOGIN_LEN))
                 return (-EINVAL);
