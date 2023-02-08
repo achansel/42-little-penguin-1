@@ -1,0 +1,38 @@
+6,9c6,10
+< int do_work(int *my_int, int retval) {
+< 	int x;
+< 	int y = *my_int;
+< 	int z;
+---
+> /* Waits and tells userspace about it */
+> int do_work(int *my_int)
+> {
+>         int i;
+>         int y = *my_int;
+11,20c12,16
+< 	for (x = 0; x < my_int; ++x)
+< 	{
+< 		udelay(10);
+< 	}
+< 	if (y < 10)
+< 		/* That was a long sleep, tell userspace about it */
+< 		pr_info("We slept a long time!");
+< 	z = x * y;
+< 	return z;
+< 		return 1;
+---
+>         for (i = 0; i < my_int; ++i)
+>                 udelay(10);
+>         if (y < 10)
+>                 pr_info("We slept a long time!");
+>         return (x * y);
+25,28c21,24
+< 	int x = 10;
+< 	
+< 	x = do_work(&x, x);
+< 	return x;
+---
+>         int x = 10;
+>         
+>         x = do_work(&x);
+>         return x;
