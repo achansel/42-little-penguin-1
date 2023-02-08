@@ -30,7 +30,6 @@ static char str[PAGE_SIZE * 2];
 static int __init myfd_init(void)
 {
         misc_register(&myfd_device);
-        memset(str, 0, sizeof(str));
         return 0;
 }
 
@@ -42,13 +41,16 @@ static void __exit myfd_cleanup(void)
 ssize_t myfd_read(struct file *fp, char __user *user, size_t size, loff_t *offs)
 {
         int     t, i;
+        int     status;
         char    *tmp;
 
         tmp = kmalloc(sizeof(char) * PAGE_SIZE * 2, GFP_KERNEL);
         for (t = strlen(str) - 1, i = 0; t >= 0; t--, i++)
                 tmp[i] = str[t];
         tmp[i] = 0x0;
-        return simple_read_from_buffer(user, size, offs, tmp, i);
+        status = simple_read_from_buffer(user, size, offs, tmp, i);
+        kfree(tmp);
+        return (status);
 }
 
 // 0x0 = '\0'
