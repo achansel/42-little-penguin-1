@@ -57,7 +57,7 @@ The code in this project will be run on the first project of the specialization,
   - Take a given file and and modify it to match the [Linux coding style](https://www.kernel.org/doc/html/v4.10/process/coding-style.html)
 
 **Turn-in**:
-  - [The compliant file](ex03/norme.patch)
+  - [Compliant file](ex03/corrected.c)
  
 **What I did**:
   - I applied the coding style on the given file using the documentation.
@@ -129,6 +129,19 @@ The code in this project will be run on the first project of the specialization,
   - I also had to read about [synchronization primitives in kernel space](https://docs.kernel.org/locking/mutex-design.html) and [jiffies](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/include/linux/jiffies.h).
   - With the help of these resources and others I wrote the code to handle these 3 files.
   - Finally, in order to test everything, I took my proof script from ex05 and heavily modified it.
+
+---------
+
+### ex08:
+**Instructions**:
+  - Take a given file, fix the coding style, and fix the behaviour of the code.
+
+**Turn-in**:
+  - [Corrected file](ex08/corrected.c)
+ 
+**What I did**:
+  - I downloaded the file, I fixed the file and I tested it to check if it behaved correctly.
+
 
 
 
