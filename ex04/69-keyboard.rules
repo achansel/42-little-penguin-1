@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="usb", ATTR{bInterfaceProtocol}=="01" RUN+="insmod /root/42-little-penguin-1/ex04/keyboard_dd.ko"

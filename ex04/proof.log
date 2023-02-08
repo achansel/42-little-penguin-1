@@ -1,0 +1,40 @@
+[    2.775014] udevd[203]: starting eudev-3.2.11
+[    3.004426] e1000 0000:00:03.0 enp0s3: renamed from eth0
+[    3.225108] Adding 8388604k swap on /dev/sda2.  Priority:1 extents:1 across:8388604k 
+[    3.236533] EXT4-fs (sda3): re-mounted. Quota mode: none.
+[    3.625807] EXT4-fs (sda3): re-mounted. Quota mode: none.
+[    3.680620] EXT4-fs (sda1): mounting ext2 file system using the ext4 subsystem
+[    3.724527] EXT4-fs (sda1): mounted filesystem without journal. Quota mode: none.
+[    4.147318] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    4.147844] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+[   49.503097] usb 2-1: new full-speed USB device number 2 using ohci-pci
+[   50.113751] usb 2-1: New USB device found, idVendor=1532, idProduct=0203, bcdDevice= 2.00
+[   50.114865] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[   50.115116] usb 2-1: Product: Razer BlackWidow Chroma
+[   50.115256] usb 2-1: Manufacturer: Razer
+[   50.125596] input: Razer Razer BlackWidow Chroma as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.0/0003:1532:0203.0001/input/input6
+[   50.179573] hid-generic 0003:1532:0203.0001: input,hidraw0: USB HID v1.11 Keyboard [Razer Razer BlackWidow Chroma] on usb-0000:00:06.0-1/input0
+[   50.190319] input: Razer Razer BlackWidow Chroma Keyboard as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.1/0003:1532:0203.0002/input/input7
+[   50.321534] input: Razer Razer BlackWidow Chroma as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.1/0003:1532:0203.0002/input/input8
+[   50.323489] hid-generic 0003:1532:0203.0002: input,hidraw1: USB HID v1.11 Keyboard [Razer Razer BlackWidow Chroma] on usb-0000:00:06.0-1/input1
+[   50.334107] input: Razer Razer BlackWidow Chroma as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.2/0003:1532:0203.0003/input/input9
+[   50.336412] hid-generic 0003:1532:0203.0003: input,hidraw2: USB HID v1.11 Mouse [Razer Razer BlackWidow Chroma] on usb-0000:00:06.0-1/input2
+[   50.614688] keyboard_dd: loading out-of-tree module taints kernel.
+[   50.614688] keyboard_dd: loading out-of-tree module taints kernel.
+[   50.614698] keyboard_dd: module license 'GPL2' taints kernel.
+[   50.615570] keyboard_dd: module license 'GPL2' taints kernel.
+[   50.617150] Disabling lock debugging due to kernel taint
+[   50.622342] keyboard_dd: Inserted keyboard !
+[   77.765455] usb 2-1: USB disconnect, device number 2
+[   87.391933] usb 2-1: new low-speed USB device number 3 using ohci-pci
+[   88.429830] usb 2-1: New USB device found, idVendor=046d, idProduct=c328, bcdDevice=86.00
+[   88.430196] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[   88.430470] usb 2-1: Product: USB Keyboard
+[   88.430658] usb 2-1: Manufacturer: Logitech
+[   88.450588] input: Logitech USB Keyboard as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.0/0003:046D:C328.0004/input/input10
+[   88.506270] hid-generic 0003:046D:C328.0004: input,hidraw0: USB HID v1.10 Keyboard [Logitech USB Keyboard] on usb-0000:00:06.0-1/input0
+[   88.524105] input: Logitech USB Keyboard Consumer Control as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.1/0003:046D:C328.0005/input/input11
+[   88.577325] input: Logitech USB Keyboard System Control as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.1/0003:046D:C328.0005/input/input12
+[   88.577859] hid-generic 0003:046D:C328.0005: input,hiddev96,hidraw1: USB HID v1.10 Device [Logitech USB Keyboard] on usb-0000:00:06.0-1/input1
+[   88.876093] keyboard_dd: Inserted keyboard !
+[   98.616617] usb 2-1: USB disconnect, device number 3
