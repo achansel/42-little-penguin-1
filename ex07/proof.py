@@ -100,9 +100,9 @@ def main():
     print(f"\n**** {PATH} TESTS ****")
     with open(PATH, "rb+", buffering=0) as g:
         read_test("Read", g.read(1024), b"achansel")
-        write_test("Different write", b"inval", False)
-        write_test("Different write same len", b"invalid!", False)
-        write_test("Good write", b"achansel", True)
+    write_test("Different write", b"inval", False)
+    write_test("Different write same len", b"invalid!", False)
+    write_test("Good write", b"achansel", True)
 
 if __name__ == "__main__":
     main()
