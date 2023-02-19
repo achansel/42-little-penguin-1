@@ -61,8 +61,7 @@ The code in this project will be run on the first project of the specialization,
  
 **What I did**:
   - I applied the coding style on the given file using the documentation.
-  - I generated a patch of the original file using the `diff` command, as, in my humble opinion, it makes it easier to see the changes.
-  
+
  ----------
 
 ### ex04:
@@ -142,6 +141,19 @@ The code in this project will be run on the first project of the specialization,
 **What I did**:
   - I downloaded the file, I fixed the file and I tested it to check if it behaved correctly.
 
+---------
 
+### ex09:
+**Instructions**:
+ - Write a kernel module that exposes a file called mymounts on the root of the procfs.
+ - It has to list mount points on the system and their associated names
 
+**Turn-in**:
+  - [The module](ex09)
 
+**What I did**:
+ - I read kernel documentation about [VFS](https://www.kernel.org/doc/html/latest/filesystems/vfs.html), [linux kernel linked lists](https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch10s05.html), [mounts](https://www.oreilly.com/library/view/understanding-the-linux/0596002130/ch12s04.html), [namespaces](https://en.wikipedia.org/wiki/Linux_namespaces) and the [seq_file interface](https://www.kernel.org/doc/html/latest/filesystems/seq_file.html).
+ - I used [strace](https://strace.io/) on `mount` binary to discover how filesystems were mounted and the needed syscalls.
+ - I read [mount](https://elixir.bootlin.com/linux/v6.1.12/source/fs/namespace.c#L3568)/[umount](https://elixir.bootlin.com/linux/v6.1.12/source/fs/namespace.c#L1828) source code in an attempt to improve my understanding of what was going on.
+ - Using those previous resources and the kernel headers, I tried to do it my own way, without success. My *working solution* used functions not [exported](https://lkw.readthedocs.io/en/latest/doc/04_exporting_symbols.html) for kernel modules.
+ - I resigned myself to do it the way the kernel does it, by looking at the `/proc/mounts` file [implementation](https://elixir.bootlin.com/linux/v6.1.12/source/fs/proc_namespace.c#L101), which I fully understood thanks to my previous readings.
