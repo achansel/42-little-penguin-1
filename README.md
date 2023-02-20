@@ -28,7 +28,7 @@ The code in this project will be run on the first project of the specialization,
 
 **Turn-in**:
   - [Makefile](ex01/Makefile)
-  - [Code](ex01/module.c)
+  - [Code](ex01/main.c)
  
 **What I did**:
   - I used *Linux Device Drivers 3rd Edition, Chapter 02* to learn about the basics of kernel module creation.
